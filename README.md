@@ -1,5 +1,6 @@
 # Lane-Line-Detection for self-driving cars on road
-![image](https://github.com/VinodhiniD-04/Lane-Line-Detection/assets/135093669/fa85207a-9018-44dc-a1c2-02ebd6d14c25)
+![image](https://github.com/VinodhiniD-04/Lane-Line-Detection/assets/135093669/d472f256-ef0d-4e3b-9bcc-6f664800abec)
+
 
 __________________________________________________________
 # dependencies
