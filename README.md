@@ -1,11 +1,13 @@
-## Lane-Line-Detection for self-driving cars on road
+# Lane-Line-Detection for self-driving cars on road
+__________________________________________________________
+# dependenc
 Domain- Computer Vision
-# import required libraries
+## import required libraries
 import numpy as np
 from google.colab.patches import cv2_imshow
 from numpy.lib.function_base import average
 
-# make_coordinates function: Generates endpoints of a line based on slope and intercept parameters.
+## make_coordinates function: Generates endpoints of a line based on slope and intercept parameters.
 
 def make_coordinates (image, line_parameters):
   slope, intercept = line_parameters
@@ -16,7 +18,7 @@ def make_coordinates (image, line_parameters):
   x2 = int((y2-intercept)/slope)
   return np.array([x1,y1,x2,y2])
   
-# average_slope_intercept function: Takes a set of lines, calculates their slopes and intercepts, separates them into left and right lanes based on slope sign, averages the parameters for each lane, and then uses these averaged parameters to generate the left and right lane lines.
+## average_slope_intercept function: Takes a set of lines, calculates their slopes and intercepts, separates them into left and right lanes based on slope sign, averages the parameters for each lane, and then uses these averaged parameters to generate the left and right lane lines.
 
 def average_slope_intercrept(image,line):
   left_fit = []
@@ -37,14 +39,14 @@ def average_slope_intercrept(image,line):
   right_line = make_coordinates(image,right_fit_average)
   return np.array([left_line, right_line])
   
-# canny function: Applies Canny edge detection after converting the image to HLS color space.
+## canny function: Applies Canny edge detection after converting the image to HLS color space.
 
 def canny(image):
   hls = cv2.cvtColor(image,cv2.COLOR_BGR2HLS)
   blur = cv2.GaussianBlur(hls,(5,5),0)
   return canny
 
-# display_lines function: Creates an image with the detected lines drawn on it.
+## display_lines function: Creates an image with the detected lines drawn on it.
 
 def display_lines (image,lines):
   line_image = np.zeros_like(image)
@@ -54,7 +56,7 @@ def display_lines (image,lines):
       cv2.line(line_image,(x1,y1),(x2,y2),(255,0,0),10)
   return line_image
 
-# region_of_interest function: Defines a region of interest (ROI) in the image to focus on the area where lane lines are expected.
+## region_of_interest function: Defines a region of interest (ROI) in the image to focus on the area where lane lines are expected.
 
 def region_of_interest(lane_image):
   height = lane_image.shape[0]
@@ -64,7 +66,7 @@ def region_of_interest(lane_image):
   masked_image = cv2.bitwise_and(lane_image,mask)
   return masked_image
 
-# The main script loads an image 'solidYellowLeft.jpg' (you can replace img using my test images file or can download dataset from kaggle), applies the series of image processing steps, detects Hough lines, averages and extrapolates them, and finally displays the original image with the detected lane lines overlaid.
+## The main script loads an image 'solidYellowLeft.jpg' (you can replace img using my test images file or can download dataset from kaggle), applies the series of image processing steps, detects Hough lines, averages and extrapolates them, and finally displays the original image with the detected lane lines overlaid.
 
 image= cv2.imread('mv solidYellowLeft.jpg')
 lane_image = np.copy(image)
