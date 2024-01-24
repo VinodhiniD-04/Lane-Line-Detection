@@ -3,14 +3,14 @@
 
 
 __________________________________________________________
-# dependencies
+# Dependencies
 * Python 3.5
 * NumPy
 * OpenCV
 * Canny edge detection
 * Hough Transform
 __________________________________________________________
-# project steps
+# Procedure
 * Import required libraries
 * Make_coordinates function: Generates endpoints of a line based on slope and intercept parameters.
 * Average_slope_intercept function: Takes a set of lines, calculates their slopes and intercepts, separates them into left and right lanes based on slope sign, averages the parameters for each lane, and then uses these averaged parameters to generate the left and right lane lines.
