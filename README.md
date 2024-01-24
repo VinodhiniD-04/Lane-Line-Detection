@@ -1,4 +1,4 @@
-# Lane-Line-Detection
+# Lane-Line-Detection for self-driving cars on road
 Domain- Computer Vision
 
 import numpy as np
