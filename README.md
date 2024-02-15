@@ -3,13 +3,43 @@
 
 
 __________________________________________________________
-# Dependencies
-* Python 3.5
-* NumPy
-* OpenCV
-* Canny edge detection
-* Hough Transform
-__________________________________________________________
+## Overview
+Lane line detection is a crucial component of autonomous driving systems, helping vehicles stay within their lanes and navigate safely. This project aims to detect lane lines on the road using computer vision techniques. It utilizes Python programming, Jupyter Notebook for development, Canny edge detection, Hough transform, and a Kaggle image dataset for training and testing.
+
+## Key Features
+* Detects lane lines on the road using computer vision techniques.
+* Uses Canny edge detection to identify edges in the image.
+* Applies the Hough transform to extract lines from the edge-detected image.
+* Utilizes a Kaggle image dataset for training and testing the lane line detection algorithm.
+
+## Requirements
+
+### Hardware Requirements
+* Computer/Server: Intel Core i5 or higher, 8 GB RAM
+
+_________________________________________________________________________________________
+
+### Software Requirements
+* Operating System: Windows
+* Programming Languages: Python
+* Integrated Development Environment: Jupyter Notebook
+
+_______________________________________________________________________________________________
+  
+## Installation
+* Clone the repository to your local machine.
+* Install the necessary dependencies using pip or conda.
+* Ensure the Kaggle image dataset is available in the correct directory.
+* Open the Jupyter Notebook file and run the code cells to perform lane line detection.
+
+_________________________________________________________________________________________________
+  
+## Usage
+* Open the Jupyter Notebook file containing the lane line detection code.
+* Run each code cell sequentially to perform edge detection, Hough transform, and lane line detection.
+* Visualize the detected lane lines on the road image.
+
+_______________________________________________________________________________________________________
 # Procedure
 * Import required libraries
 * Make_coordinates function: Generates endpoints of a line based on slope and intercept parameters.
